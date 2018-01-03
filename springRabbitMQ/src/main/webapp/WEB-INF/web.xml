@@ -12,7 +12,7 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-            classpath:spring/applicationContext-mq.xml
+            classpath:spring/applicationContext-mq.xml;
     </param-value>
   
   </context-param>

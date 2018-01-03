@@ -12,12 +12,16 @@ package com.zsy.test.swaggerController;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 /**
  * ClassName: RestController 
@@ -33,9 +37,9 @@ import io.swagger.annotations.ApiOperation;
 @Api(value = "Test", description = "test the swagger API")
 @RestController("/rest")
 public class RestControllerTest {
-	@ApiOperation(value = "save add", notes = "", response = String.class)
+	@ApiOperation(value = "save add", notes = "保存方法", response = String.class,httpMethod="post")
 	@RequestMapping(value="/add",method = RequestMethod.POST , produces = {"application/json; charset=UTF-8"})
-	public ResponseEntity<String> add(String name){
+	public ResponseEntity<String> add(@RequestBody @ApiParam(value="保存一个user",required=true) String name){
 		System.err.println("新增方法，参数name= "+name);
 		return new ResponseEntity<String>(name+",hello-------add", HttpStatus.OK); 
 	}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.zsy</groupId>
+	<artifactId>spring-batch-job</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>spring-batch-job</name>
+	<description>spring-batch-job  project for Spring Boot</description>
+<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://192.168.201.103:8081/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>goldenshield</id>
+			<name>goldenshield Release Repository</name>
+			<url>http://192.168.201.103:8081/nexus/content/repositories/goldenshield/</url>
+		</repository>
+		<repository>
+			<id>3rd party</id>
+			<name>3rd party Release Repository</name>
+			<url>http://192.168.201.103:8081/nexus/content/repositories/3rdparty/</url>
+		</repository>
+	</repositories> 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.7</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		 <dependency>  
+            <groupId>org.springframework.batch</groupId>  
+            <artifactId>spring-batch-core</artifactId>  
+            </dependency>  
+        <dependency>  
+            <groupId>org.springframework.batch</groupId>  
+            <artifactId>spring-batch-infrastructure</artifactId>  
+            </dependency>  
+        <dependency>  
+            <groupId>org.springframework.batch</groupId>  
+            <artifactId>spring-batch-test</artifactId>  
+            <scope>test</scope>  
+        </dependency>  
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		 <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+          </dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.1.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

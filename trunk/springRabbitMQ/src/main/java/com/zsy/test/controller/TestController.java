@@ -66,14 +66,19 @@ public class TestController {
 	
 	@RequestMapping("/get")
 	public String  get(){
-		//handler.sendMessageToUser("101", "服务端发送的内容");
 		return "index";
+	}
+	
+	@RequestMapping("/index2")
+	public String  index2(){
+		return "index2";
 	}
 	
 	@ResponseBody
 	@RequestMapping("/get1")
 	public String  send(String name){
-		handler.sendMessageToUser("zhaoshouyun", "服务端发送的内容:"+name);
+		//handler.sendMessageToUser("zhaoshouyun", "服务端发送的内容:"+name);
+		handler.sendMessageToAllUsers("服务端发送的内容:"+name);
 		return "success";
 	}
 	

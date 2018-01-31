@@ -24,9 +24,12 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zsy.test.service.ProducerService;
+import com.zsy.websocket.MyMessageHandler;
 
 /**
  * ClassName: TestController 
@@ -37,11 +40,13 @@ import com.zsy.test.service.ProducerService;
  * @since JDK 1.7
  */
 @Controller
-@RequestMapping
 public class TestController {
 
 	@Autowired
 	ProducerService producerService;
+	
+	@Autowired
+	MyMessageHandler handler;
 	
 	@Value("${mq.queue}")
 	private String queueId;
@@ -57,5 +62,21 @@ public class TestController {
 	        producerService.sendQueue(queueId + "_exchange", "zsyQueue" + "_patt", "哈哈哈哈");
 	        return "success";
 	}
+	
+	
+	@RequestMapping("/get")
+	public String  get(){
+		//handler.sendMessageToUser("101", "服务端发送的内容");
+		return "index";
+	}
+	
+	@ResponseBody
+	@RequestMapping("/get1")
+	public String  send(String name){
+		handler.sendMessageToUser("zhaoshouyun", "服务端发送的内容:"+name);
+		return "success";
+	}
+	
+	
 }
 

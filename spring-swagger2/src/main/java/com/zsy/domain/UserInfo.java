@@ -1,11 +1,14 @@
 package com.zsy.domain;
 
+import java.util.Date;
+
 public class UserInfo {
 	private long id;
 	private String userName;
 	private String password;
 	private String phone;
 	private String address;
+	private Date createTime;
 
 	public long getId() {
 		return id;
@@ -45,6 +48,14 @@ public class UserInfo {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 }

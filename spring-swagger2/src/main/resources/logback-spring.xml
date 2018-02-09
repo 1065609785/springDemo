@@ -12,7 +12,7 @@
     <!--日志上下文，建议和项目上下文保持一致  -->
     <contextName>spring-swagger2</contextName>
     <!-- 定义日志文件 输入位置 -->  
-    <property name="log_dir" value="/logs/spring-swagger2" />  
+    <property name="log_dir" value="D:/logs/spring-swagger2" />  
     <!-- 日志最大的历史 30天 -->  
     <property name="maxHistory" value="30"/>  
   
@@ -160,6 +160,7 @@
     <logger name="com.ibatis.common.jdbc.SimpleDataSource" value="DEBUG" />    
     <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG"/>    
     <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" value="DEBUG" />    
+    <logger name="com.zsy.mapper" value="DEBUG" />    
       
       
       

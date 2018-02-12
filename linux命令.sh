@@ -44,6 +44,7 @@ source /etc/profile
 wget  http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.33-linux-glibc2.5-x86_64.tar.gz
 tar -zxvf mysql-5.6.33-linux-glibc2.5-x86_64.tar.gz
 #mysql安装参照这个http://www.jb51.net/article/104107.htm
+#卸载命令 rpm -qa|grep -i mysql     rpm -ev MySQL-client-5.5.25a-1.rhel5 --nodeps
 
 
 #安装tomcat

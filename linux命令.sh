@@ -2,6 +2,9 @@
 #设置读写权限
 chmod -R 775 ./
 
+#安装lrzsz 方便上传文件和下载文件
+ yum install lrzsz -y
+
 
 #查看防火墙状态
 service iptables status
@@ -45,7 +48,8 @@ wget  http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.33-linux-glibc2.5-x
 tar -zxvf mysql-5.6.33-linux-glibc2.5-x86_64.tar.gz
 #mysql安装参照这个http://www.jb51.net/article/104107.htm
 #卸载命令 rpm -qa|grep -i mysql     rpm -ev MySQL-client-5.5.25a-1.rhel5 --nodeps
-
+#重启mysql
+ service mysqld restart
 
 #安装tomcat
 wget http://mirrors.shu.edu.cn/apache/tomcat/tomcat-7/v7.0.84/bin/apache-tomcat-7.0.84.tar.gz

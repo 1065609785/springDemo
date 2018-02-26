@@ -1,0 +1,1 @@
+1、defaultjms是普通的，如果想测试，请把upgradejms下的conf给注释掉

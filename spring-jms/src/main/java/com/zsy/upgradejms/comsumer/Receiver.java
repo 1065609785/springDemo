@@ -4,7 +4,6 @@ import javax.jms.JMSException;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.listener.SessionAwareMessageListener;
 

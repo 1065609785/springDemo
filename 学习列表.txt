@@ -1,0 +1,4 @@
+1、springboot+jms+activeMq 高效并发 
+2、设计activeMq主从，，一般通过jdbc来实现会好点   http://blog.csdn.net/xiaoxing598/article/details/51604999
+3、spring+redis+dubbo+RSA+AES 动态加解密
+4、disconf和apollo 配置中心
